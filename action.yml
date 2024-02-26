@@ -2,6 +2,7 @@ name: 'Create Remote Pull Request'
 description: 'Creates a pull request across repositories.'
 runs:
   using: 'node12'
+  main: 'index.js'
 inputs:
   title:
     description: 'Title of the pull request.'
