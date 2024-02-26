@@ -1,0 +1,23 @@
+name: 'Create Remote Pull Request'
+description: 'Creates a pull request across repositories.'
+runs:
+  using: 'node12'
+inputs:
+  title:
+    description: 'Title of the pull request.'
+    required: true
+  body:
+    description: 'Body of the pull request.'
+    required: true
+  owner:
+    description: 'Owner of the target repository.'
+    required: true
+  repo:
+    description: 'Name of the target repository.'
+    required: true
+  branch:
+    description: 'Branch to create the pull request from.'
+    required: true
+  base-branch:
+    description: 'Target branch in the target repository.'
+    required: true
