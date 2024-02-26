@@ -21,4 +21,7 @@ inputs:
     required: true
   base-branch:
     description: 'Target branch in the target repository.'
+    required: false
+  token:
+    description: 'API token'
     required: true
