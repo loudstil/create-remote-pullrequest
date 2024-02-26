@@ -10,7 +10,7 @@ This Action automates the process of creating a pull request across repositories
 - `repo` (required): Name of the target repository.
 - `branch` (required): Branch to create the pull request from.
 - `base-branch` (optional): Target branch in the target repository.
-- `token` (required): token 
+- `token` (optional): token 
 
 ## Example Usage
 

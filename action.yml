@@ -24,4 +24,4 @@ inputs:
     required: false
   token:
     description: 'API token'
-    required: true
+    required: false
