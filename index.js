@@ -10,7 +10,7 @@ async function run() {
     const owner = core.getInput('owner');
     const repoName = core.getInput('repo');
     const branchName = core.getInput('branch');
-    const baseBranch = core.getInput('base-branch') || 'master';    
+    const baseBranch = core.getInput('base-branch');    
 
     // create pull request
     const pullRequestResponse = await octokit.rest.pulls.create({
