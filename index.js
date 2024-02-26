@@ -1,9 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-// Create Octokit instance outside functions
-const octokit = github.getOctokit(core.getInput('token'));
-
 async function run() {
   try {
     const title = core.getInput('title');
@@ -12,6 +9,8 @@ async function run() {
     const repoName = core.getInput('repo');
     const branchName = core.getInput('branch');
     const baseBranch = core.getInput('base-branch') || 'master';
+    const token = core.getInput('token') || github.token;
+    const octokit = github.getOctokit(token);
 
     // create pull request
     const pullRequestResponse = await octokit.rest.pulls.create({
