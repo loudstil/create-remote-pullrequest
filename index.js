@@ -25,7 +25,7 @@ async function run() {
       head: branchName
     });
 
-    console.log(`Pull request created: ${pullRequest.data.html_url}`);
+    console.log(`Pull request created: ${pullRequestResponse.data.html_url}`);
   } catch (error) {
     core.setFailed(error.message);
   }
