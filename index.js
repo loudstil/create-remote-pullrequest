@@ -1,8 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 
-const octokit = github.getOctokit(core.getInput('token'));
-
 async function run() {
   try {
     const title = core.getInput('title');
